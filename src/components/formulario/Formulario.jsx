@@ -33,6 +33,8 @@ export default function Formulario({ addAlert, setData, data, setDataFilter, dat
   function validandoDatos(e) {
     e.preventDefault();
 
+    const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const regexTelef = /^[0-9]{9}$/;
 
     if (
       datosColaborador.nombre.trim() === '' ||
